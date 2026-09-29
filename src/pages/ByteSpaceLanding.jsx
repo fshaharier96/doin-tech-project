@@ -4,6 +4,8 @@ import {
   Briefcase, Megaphone, Camera, Menu, X, Plus,
 } from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 import SiteLogo from '../assets/site-logo.png'
 import TextLogo from '../assets/text-logo.png'
 
@@ -259,8 +261,8 @@ function Header() {
         ))}
       </nav>
       <div className="flex items-center gap-[22px]">
-        <a href="#login" className="hidden md:inline">Log in</a>
-        <a href="#signup" className="hidden md:inline">Sign up</a>
+        <Link  to="/login" className="hidden md:inline">Log in</Link>
+        <Link  to ="/signup" className="hidden md:inline">Sign up</Link>
         <button className="hidden md:grid place-items-center bg-transparent text-white p-0" aria-label="Cart">
           <ShoppingCart size={16} />
         </button>

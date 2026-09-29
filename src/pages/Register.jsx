@@ -1,5 +1,6 @@
 import { useState } from "react";
-import illustration from "./assets/signup-illustration.png";
+import illustration from "../assets/signup-illustration.png";
+import SiteLogo from '../assets/site-logo.png'
 
 /**
  * ByteSpace – Sign up page
@@ -40,7 +41,7 @@ function Field({ id, label, type = "text", placeholder, value, onChange, autoCom
   );
 }
 
-export default function SignUp() {
+export default function Register() {
   const [form, setForm] = useState({ fullName: "", email: "", password: "" });
 
   const handleChange = (e) =>
@@ -62,14 +63,7 @@ export default function SignUp() {
         <section className="flex w-full flex-col lg:min-h-[640px] lg:max-w-[560px] lg:self-stretch">
           {/* Logo */}
           <a href="/" aria-label="ByteSpace home" className="inline-block w-fit">
-            <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-              <path
-                d="M6 3a3 3 0 0 1 3-3h1a3 3 0 0 1 3 3v6.2A11 11 0 0 1 17 8c6.075 0 11 4.925 11 11s-4.925 11-11 11c-2.9 0-5.4-1.2-7.2-3.2A3 3 0 0 1 6 24.3V3Z"
-                fill="#D4F800"
-                transform="translate(1 2) scale(.95)"
-              />
-              <circle cx="17.5" cy="20" r="4" fill="#0537F0" />
-            </svg>
+            <img src={SiteLogo}/>
           </a>
 
           <div className="mt-6 max-w-[380px]">
@@ -84,7 +78,7 @@ export default function SignUp() {
           <img
             src={illustration}
             alt="Preview of ByteSpace courses and happy students"
-            className="mt-8 w-full max-w-[460px] select-none self-start object-contain lg:mt-auto"
+            className="mt-8 w-full max-w-[460px] select-none self-start object-contain lg:mt-4"
             draggable="false"
           />
         </section>

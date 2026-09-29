@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Home from './pages/Home'
 import ByteSpaceLanding from './pages/ByteSpaceLanding'
-import { Route, Router } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
-import Sign
+import Register from './pages/Register'
 
 
 function App() {
@@ -13,11 +12,12 @@ function App() {
   return (
     <>
       {/* <Home/> */}
-      <ByteSpaceLanding/>
-      <Router>
+    
+      <Routes>
+        <Route path="/" element={<ByteSpaceLanding/>} />
         <Route path="/login" element={<Login/>} />
-        <Route path="/signup" element={<SignUp/>} />
-       </Router>
+        <Route path="/signup" element={<Register/>} />
+       </Routes>
     </>
   )
 }

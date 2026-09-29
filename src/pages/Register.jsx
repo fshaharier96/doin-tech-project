@@ -2,17 +2,6 @@ import { useState } from "react";
 import illustration from "../assets/signup-illustration.png";
 import SiteLogo from '../assets/site-logo.png'
 
-/**
- * ByteSpace – Sign up page
- *
- * Setup:
- * 1. Put signup-illustration.png in ./assets/
- * 2. Add these fonts to index.html <head>:
- *    <link rel="preconnect" href="https://fonts.googleapis.com" />
- *    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- *    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
- */
-
 const gridStyle = {
   backgroundColor: "#0537F0",
   backgroundImage:
